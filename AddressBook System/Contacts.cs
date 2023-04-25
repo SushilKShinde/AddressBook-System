@@ -23,6 +23,10 @@ namespace AddressBook_System
                 new Contact() {firstName = "Sachin", lastName = "sharma", address = "Shivajinagar", city = "Pune",state = "Andhra Pradesh", email = "kgf@gmail.com", zip = 413314, phoneNumber = 56789 },
                 new Contact() {firstName = "Virat", lastName = "Kohli", address = "Gandhi", city = "Varanasi",state = "Uttar Pradesh", email = "rrr@hotmail.com", zip = 413325, phoneNumber = 123456 }
             };
+        public List<Contact> getList()
+        {
+            return contacts;
+        }
         public static void ContactDetails()
         {
             

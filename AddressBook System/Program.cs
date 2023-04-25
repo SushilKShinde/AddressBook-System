@@ -11,22 +11,26 @@ namespace AddressBook_System
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Adress Book System problem\n");
+            Console.WriteLine("Existing contact details are:\n");
+            Contact.ContactDetails();
             Console.WriteLine("Choose from the below options\n ");
-            Console.WriteLine(" 1.Print existing contact details in adress book\n 2.Add new contact in address book\n ");
+            Console.WriteLine(" 1. Add new contact in address book\n 2. Update the contact details ");
             int option = Convert.ToInt32(Console.ReadLine());
-
+           
             switch (option)
             {
                 case 1:
-                    Contact.ContactDetails();
-                    break;
-                case 2:
                     AddNewContact contact = new AddNewContact();
                     contact.AddNewContactToAddressBook();
                     break;
+                case 2:
+                    //List<Contact> list = new List<Contact>();
+                    UpdateContact.UpdateContactDetails(Contact.contacts);
+                    break;
+                default:
+                    Console.WriteLine("Please choose correct option");
+                    break;
             }
-            
-
         }
     }
 }
