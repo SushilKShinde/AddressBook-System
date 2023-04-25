@@ -14,7 +14,7 @@ namespace AddressBook_System
             Console.WriteLine("Existing contact details are:\n");
             Contact.ContactDetails();
             Console.WriteLine("Choose from the below options\n ");
-            Console.WriteLine(" 1. Add new contact in address book\n 2. Update the contact details ");
+            Console.WriteLine(" 1. Add new contact in address book\n 2. Update the contact details\n 3. Delete existing contact details");
             int option = Convert.ToInt32(Console.ReadLine());
            
             switch (option)
@@ -26,6 +26,9 @@ namespace AddressBook_System
                 case 2:
                     //List<Contact> list = new List<Contact>();
                     UpdateContact.UpdateContactDetails(Contact.contacts);
+                    break;
+                case 3:
+                    DeleteContact.DeleteExistingContact(Contact.contacts);
                     break;
                 default:
                     Console.WriteLine("Please choose correct option");

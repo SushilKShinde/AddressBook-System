@@ -70,10 +70,11 @@ namespace AddressBook_System
                     Console.WriteLine("Updated contact details:\n");
                     Console.WriteLine($"firstName:{contact.firstName}, lastName = {contact.lastName}, address ={contact.address}, city = {contact.city},state = {contact.state}, email ={contact.email}, zip = {contact.zip}, phoneNumber = {contact.phoneNumber}");
                 }
-                if(!isExisting)
-                {
-                    Console.WriteLine("Contact does not exist in address book");
-                }
+              
+            }
+            if (!isExisting)
+            {
+                Console.WriteLine("Contact does not exist in address book");
             }
 
         }
